@@ -4,13 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import FinBot from './components/finBot/finBot'
 import Translate from './components/translate/translate'
-
+import NewsAndArticles from './Pages/newsAndArticles'
   const count=1500;
 export function App() {
   return (
     <>
       <Translate/>
       <FinBot/>
+      <NewsAndArticles/>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
