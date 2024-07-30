@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/menubar";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import Translate from "@/components/core/translate/translate";
 
 // Define type for dropdown options
 type DropdownOption = {
@@ -85,7 +86,8 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="flex items-center justify-between p-4">
-        <div className="text-xl font-bold">Website Name</div>
+        <div className="text-xl font-bold mr-4">FinTech</div>
+        <div className="w-full justify-between items-center flex flex-row">
         <Menubar>
           <MenubarMenu>
             <MenubarTrigger>Home</MenubarTrigger>
@@ -114,6 +116,8 @@ export default function Home() {
             </MenubarContent>
           </MenubarMenu>
         </Menubar>
+        <Translate/>
+        </div>
       </div>
 
       <div className="flex-grow flex flex-col items-center p-4 space-y-4">

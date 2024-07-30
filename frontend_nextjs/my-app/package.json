@@ -23,7 +23,9 @@
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.4.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "@google/generative-ai": "^0.16.0",
+    "react-chatbotify": "^2.0.0-beta.3"
   },
   "devDependencies": {
     "@types/node": "^20",
