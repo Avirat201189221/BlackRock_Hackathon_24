@@ -1,13 +1,16 @@
-import { useState } from 'react'
+import { useState ,useEffect} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import FinBot from './components/finBot/finBot'
+import Translate from './components/translate/translate'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+  const count=1500;
+export function App() {
   return (
     <>
+      <Translate/>
+      <FinBot/>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -31,5 +34,4 @@ function App() {
     </>
   )
 }
-
 export default App
