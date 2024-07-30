@@ -31,32 +31,6 @@ app.use(express.json());
 
 app.use('/userbase', userbase);
 
-app.post('/api/send-email', upload.single('pdf'), (req, res) => {
-  const mailOptions = {
-      from: 'your-email@gmail.com',
-      to: 'recipient-email@example.com',
-      subject: 'Account Statement',
-      text: 'Please find attached the account statement.',
-      attachments: [
-          {
-              filename: 'account_statement.pdf',
-              content: req.file.buffer,
-              encoding: 'base64'
-          }
-      ]
-  };
-
-  transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-          console.error('Error sending email:', error);
-          res.status(500).send('Failed to send email');
-      } else {
-          console.log('Email sent:', info.response);
-          res.send('Email sent successfully');
-      }
-  });
-});
-
 app.listen(port, function () {
   console.log("Server Started at ", port);
 });
