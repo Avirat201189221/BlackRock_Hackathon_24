@@ -41,13 +41,14 @@ const sgbBonds = new mongoose.Schema({
 
 const UserSchema = new mongoose.Schema({
     phoneNumber: { type: String },
+    password: {type: String},
     amount: { type: Number },
-    indianStockMarketInvestment: [{ type: IndianStockMarket }],
-    mutualFundInvestment: [{ type: MutualFund }],
-    fdInvestment: [{ type: Fd }],
-    usSharesInvestment: [{ type: usShares }],
-    rbiBondsInvestment: [{ type: rbiBonds }],
-    sgbBondsInvestment: [{ type: sgbBonds }],
+    indianStockMarketInvestment: { type: IndianStockMarket },
+    mutualFundInvestment: { type: MutualFund },
+    fdInvestment: { type: Fd },
+    usSharesInvestment: { type: usShares },
+    rbiBondsInvestment: { type: rbiBonds },
+    sgbBondsInvestment: { type: sgbBonds },
 });
 
 module.exports = mongoose.model('User', UserSchema);
