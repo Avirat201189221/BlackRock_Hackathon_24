@@ -1,8 +1,51 @@
 const mongoose = require('mongoose');
 
-const UserSchema = new mongoose.Schema({
-    username: { type: toString},
+const MutualFund = new mongoose.Schema({
+    mutualFund: { type: String},
     amount: { type: Number}
 });
 
-module.exports = mongoose.model('users', UserSchema);
+const IndianStockMarket = new mongoose.Schema({
+    companyName: { type: String },
+    units: { type: Number },
+    amount: { type: Number }
+});
+
+const Fd = new mongoose.Schema({
+    bankName: { type: String},
+    amountInvested: { type: Number},
+    date : {type: Date},
+    tenure: {type: Number},
+    interestRate: {type: Number},
+});
+
+const usShares = new mongoose.Schema({
+    companyName: { type: String },
+    units: { type: Number },
+    amount: { type: Number }
+});
+
+const rbiBonds = new mongoose.Schema({
+    units: { type: Number },
+    date : {type: Date},
+});
+
+const sgbBonds = new mongoose.Schema({
+    units: { type: Number },
+    date : {type: Date},
+});
+
+
+const UserSchema = new mongoose.Schema({
+    phoneNumber: { type: String },
+    password: {type: String},
+    amount: { type: Number },
+    indianStockMarketInvestment: [{ type: IndianStockMarket }],
+    mutualFundInvestment: [{ type: MutualFund }],
+    fdInvestment: [{ type: Fd }],
+    usSharesInvestment: [{ type: usShares }],
+    rbiBondsInvestment: [{ type: rbiBonds }],
+    sgbBondsInvestment: [{ type: sgbBonds }],
+});
+
+module.exports = mongoose.model('User', UserSchema);
