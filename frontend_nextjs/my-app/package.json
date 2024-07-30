@@ -25,7 +25,8 @@
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
     "@google/generative-ai": "^0.16.0",
-    "react-chatbotify": "^2.0.0-beta.3"
+    "react-chatbotify": "^2.0.0-beta.3",
+    "react-bootstrap": "^2.10.4"
   },
   "devDependencies": {
     "@types/node": "^20",
