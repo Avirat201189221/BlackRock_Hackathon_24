@@ -1,10 +1,7 @@
 const mongoose = require('mongoose');
-const IndianStockMarket = require('./indianStockMarket');
-const MutualFund = require('./mutualFund');
-const Fd = require('./fixedDeposit');
 
 const MutualFund = new mongoose.Schema({
-    mutualFund: { type: toString},
+    mutualFund: { type: String},
     amount: { type: Number}
 });
 
@@ -43,12 +40,12 @@ const UserSchema = new mongoose.Schema({
     phoneNumber: { type: String },
     password: {type: String},
     amount: { type: Number },
-    indianStockMarketInvestment: { type: IndianStockMarket },
-    mutualFundInvestment: { type: MutualFund },
-    fdInvestment: { type: Fd },
-    usSharesInvestment: { type: usShares },
-    rbiBondsInvestment: { type: rbiBonds },
-    sgbBondsInvestment: { type: sgbBonds },
+    indianStockMarketInvestment: [{ type: IndianStockMarket }],
+    mutualFundInvestment: [{ type: MutualFund }],
+    fdInvestment: [{ type: Fd }],
+    usSharesInvestment: [{ type: usShares }],
+    rbiBondsInvestment: [{ type: rbiBonds }],
+    sgbBondsInvestment: [{ type: sgbBonds }],
 });
 
 module.exports = mongoose.model('User', UserSchema);

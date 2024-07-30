@@ -14,15 +14,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 5000; 
 
-const userbase = require('./Routes/userdata');
-
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-      user: 'your-email@gmail.com',
-      pass: 'your-password'
-  }
-});
+const userbase = require('./routes/user_routes');
 
 mongoDB();
 
