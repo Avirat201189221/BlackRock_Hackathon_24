@@ -36,10 +36,10 @@ type SelectedValues = {
 
 // Define labels for each dropdown
 const dropdownLabels = [
-  "Example Label",  // For dropdown1
-  "Option Label 1", // For dropdown2
-  "Option Label 2", // For dropdown3
-  "Option Label 3"  // For dropdown4
+  "Mutual Fund",  // For dropdown1
+  "Stock Market (India)", // For dropdown2
+  "Stock Market (USA)", // For dropdown3
+  "Fixed Deposit"  // For dropdown4
 ];
 
 const dropdownOptions: DropdownOptions = {
