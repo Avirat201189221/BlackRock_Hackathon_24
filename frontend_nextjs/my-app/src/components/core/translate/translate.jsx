@@ -20,7 +20,7 @@ export default function Translate() {
           existingTranslateElement.innerHTML = '';
         }
         new window.google.translate.TranslateElement(
-          { pageLanguage: 'en', includedLanguages: 'en,fr,es,de,it,ja,ko,zh-CN' },
+          { pageLanguage: 'en', includedLanguages: 'en,hi,bn,gu,kn,ml,mr,ta,te,ur' },
           'google_translate_element'
         );
       }
